@@ -1,0 +1,29 @@
+{
+  "name": "videofree-plugins",
+  "version": "1.0.0",
+  "description": "VideoFree 视频播放器官方/社区精选插件仓库",
+  "main": "dist/maccms/index.js",
+  "scripts": {
+    "serve": "python3 -m http.server 8888",
+    "build": "node ./scripts/build.js && node ./scripts/generate.js",
+    "generate": "node ./scripts/generate.js",
+    "test-all": "node ./test/test-all.js"
+  },
+  "keywords": [
+    "videofree",
+    "musicfree",
+    "video-plugins",
+    "maccms",
+    "flutter_v"
+  ],
+  "author": "VideoFree Community",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "crypto-js": "^4.2.0",
+    "qs": "^6.11.2",
+    "typescript": "^5.0.0"
+  }
+}

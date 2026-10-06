@@ -1,0 +1,55 @@
+{
+  "name": "VideoFreePlugins 官方精选插件库",
+  "version": "1.0.0",
+  "description": "VideoFree 视频播放器精选插件集合，包含苹果CMS通用源、非凡、量子、暴风、索尼与B站公开源",
+  "plugins": [
+    {
+      "name": "暴风影视",
+      "platform": "bfzy_plugin",
+      "version": "1.0.0",
+      "url": "dist/bfzy/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bfzy/index.js",
+      "description": "暴风资源高清秒播源"
+    },
+    {
+      "name": "哔哩哔哩",
+      "platform": "bilibili_video",
+      "version": "1.0.0",
+      "url": "dist/bilibili/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bilibili/index.js",
+      "description": "哔哩哔哩公开视频搜索与在线播放"
+    },
+    {
+      "name": "非凡影视",
+      "platform": "ffzy_plugin",
+      "version": "1.0.0",
+      "url": "dist/ffzy/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/ffzy/index.js",
+      "description": "非凡影视高清视频资源"
+    },
+    {
+      "name": "量子影视",
+      "platform": "lzzy_plugin",
+      "version": "1.0.0",
+      "url": "dist/lzzy/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/lzzy/index.js",
+      "description": "量子资源极速影视源"
+    },
+    {
+      "name": "苹果CMS通用源",
+      "platform": "maccms_universal",
+      "version": "1.0.0",
+      "url": "dist/maccms/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maccms/index.js",
+      "description": "支持自定义任意苹果CMS采集API接口的通用插件"
+    },
+    {
+      "name": "索尼影视",
+      "platform": "snzy_plugin",
+      "version": "1.0.0",
+      "url": "dist/snzy/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/snzy/index.js",
+      "description": "索尼资源超清片源"
+    }
+  ]
+}
