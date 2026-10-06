@@ -2,7 +2,7 @@
 
 VideoFreePlugins 是专为 **VideoFree (flutter_v)** 视频播放器打造的官方与社区精选插件库。
 
-设计理念与规范深度对标 [MusicFreePlugins](https://github.com/maotoumao/MusicFreePlugins)，支持通过 JavaScript 脚本扩展任意第三方视频源（包括开放 API、网页爬虫、防盗链解析与网页嗅探）。
+设计理念与规范深度对标 [MusicFreePlugins](https://github.com/maotoumao/MusicFreePlugins)，已将原项目 30+ 优质影视采集源与全网综合资源全部插件化，支持通过 JavaScript 脚本扩展任意第三方视频源（包括开放 API、网页爬虫、防盗链解析与网页嗅探）。
 
 ---
 
@@ -20,23 +20,44 @@ VideoFreePlugins 是专为 **VideoFree (flutter_v)** 视频播放器打造的官
   ```text
   https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/plugins.json
   ```
-- **本地开发测试（启动本地服务后）**：
-  ```text
-  http://127.0.0.1:8888/plugins.json  (模拟器/桌面端)
-  http://192.168.31.16:8888/plugins.json  (局域网真机)
-  ```
 
 ---
 
-## 🧩 插件列表
+## 🧩 插件列表 (共 32 个)
 
 | 插件名称 | 唯一标识 (platform) | 版本 | 功能说明 | 单插件直链 |
 | :--- | :--- | :--- | :--- | :--- |
 | **苹果CMS通用源** | `maccms_universal` | 1.0.0 | 支持用户在 App 内自定义任意苹果 CMS v10 API 接口 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maccms/index.js) |
-| **非凡影视** | `ffzy_plugin` | 1.0.0 | 非凡影视官方高清秒播 M3U8 片源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/ffzy/index.js) |
-| **量子影视** | `lzzy_plugin` | 1.0.0 | 量子影视极速资源片库 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/lzzy/index.js) |
-| **暴风影视** | `bfzy_plugin` | 1.0.0 | 暴风资源海量蓝光片库 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bfzy/index.js) |
-| **索尼影视** | `snzy_plugin` | 1.0.0 | 索尼精品采集线路 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/snzy/index.js) |
+| **猫眼影视** | `maoyan_plugin` | 1.0.0 | 猫眼高清采集资源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maoyan/index.js) |
+| **电影天堂** | `tiantang_plugin` | 1.0.0 | 电影天堂经典片源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/tiantang/index.js) |
+| **360影视** | `sanliu_plugin` | 1.0.0 | 360资源秒播线路 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/sanliu/index.js) |
+| **非凡影视** | `ffzy_plugin` | 1.0.0 | 非凡影视官方高清视频资源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/ffzy/index.js) |
+| **牛牛影视** | `niuniu_plugin` | 1.0.0 | 牛牛资源极速线路 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/niuniu/index.js) |
+| **红牛影视** | `hongniu_plugin` | 1.0.0 | 红牛资源秒播线路 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/hongniu/index.js) |
+| **快车影视** | `kuaiche_plugin` | 1.0.0 | 快车资源海量剧集 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/kuaiche/index.js) |
+| **索尼影视** | `snzy_plugin` | 1.0.0 | 索尼资源超清片源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/snzy/index.js) |
+| **卧龙影视** | `wolong_plugin` | 1.0.0 | 卧龙资源超清剧库 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/wolong/index.js) |
+| **虎牙影视** | `huya_plugin` | 1.0.0 | 虎牙官方采集资源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/huya/index.js) |
+| **奇异影视** | `qiyi_plugin` | 1.0.0 | 奇异高清秒播 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/qiyi/index.js) |
+| **豪华影视** | `haohua_plugin` | 1.0.0 | 豪华资源全网热播 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/haohua/index.js) |
+| **极速影视** | `jisu_plugin` | 1.0.0 | 极速资源专线 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/jisu/index.js) |
+| **最大影视** | `zuid_plugin` | 1.0.0 | 最大资源老牌稳定片库 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/zuid/index.js) |
+| **金鹰影视** | `jinying_plugin` | 1.0.0 | 金鹰影视稳定接口 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/jinying/index.js) |
+| **瀑布影视** | `pubu_plugin` | 1.0.0 | 瀑布资源综合片源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/pubu/index.js) |
+| **量子影视** | `lzzy_plugin` | 1.0.0 | 量子资源极速影视源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/lzzy/index.js) |
+| **速播影视** | `subo_plugin` | 1.0.0 | 速播资源高速片源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/subo/index.js) |
+| **四圈影视** | `siquan_plugin` | 1.0.0 | 四圈影视专线 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/siquan/index.js) |
+| **暴风影视** | `bfzy_plugin` | 1.0.0 | 暴风资源高清秒播源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bfzy/index.js) |
+| **光速影视** | `guangsu_plugin` | 1.0.0 | 光速资源极速播放 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/guangsu/index.js) |
+| **无尽影视** | `wujin_plugin` | 1.0.0 | 无尽资源稳定高清源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/wujin/index.js) |
+| **魔都影视** | `modu_plugin` | 1.0.0 | 魔都动漫与综合资源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/modu/index.js) |
+| **新浪影视** | `xinlang_plugin` | 1.0.0 | 新浪秒播专线 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/xinlang/index.js) |
+| **鸭鸭影视** | `yaya_plugin` | 1.0.0 | 鸭鸭资源影视片库 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/yaya/index.js) |
+| **飘零影视** | `piaoling_plugin` | 1.0.0 | 飘零网络超清源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/piaoling/index.js) |
+| **茅台影视** | `maotai_plugin` | 1.0.0 | 茅台资源海量片库 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maotai/index.js) |
+| **豆瓣影视** | `dbzy_plugin` | 1.0.0 | 豆瓣资源精选片单 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/dbzy/index.js) |
+| **妖灵影视** | `yaoling_plugin` | 1.0.0 | 1080P 超清片源 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/yaoling/index.js) |
+| **爱坤影视** | `aikun_plugin` | 1.0.0 | 爱坤影视专线 | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/aikun/index.js) |
 | **哔哩哔哩** | `bilibili_video` | 1.0.0 | B 站公开视频搜索与在线嗅探播放，支持配置 Cookie | [下载](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bilibili/index.js) |
 
 ---
@@ -130,14 +151,6 @@ module.exports = {
   }
 };
 ```
-
-### 2. 沙箱环境可用库与全局对象
-- **`axios`**：网络请求库（已由 Dart 宿主网络代理，**突破同源策略 CORS，且支持任意 Referer / UA 伪造**）。
-- **`cheerio`**：仿 jQuery HTML DOM 选择器。
-- **`CryptoJS`**：常用加解密算法（MD5、AES、Base64、SHA 等）。
-- **`qs`**：查询字符串解析与拼装。
-- **`env.getUserVariable(key)`**：获取用户在客户端界面设置的参数值。
-- **`env.sniffVideo(url)`**：调用客户端内置嗅探通道自动捕获视频流。
 
 ---
 

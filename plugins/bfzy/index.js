@@ -1,6 +1,6 @@
 /**
  * 暴风影视 (BFZY) 插件
- * 基于苹果CMS标准接口
+ * 基于苹果CMS标准采集接口
  */
 const axios = require('axios');
 
@@ -16,7 +16,7 @@ module.exports = {
     {
       key: 'apiUrl',
       title: '采集接口地址',
-      description: '默认使用暴风官方接口',
+      description: '默认使用暴风影视官方接口',
       defaultValue: 'https://bfzyapi.com/api.php/provide/vod/'
     }
   ],
