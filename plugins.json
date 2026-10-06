@@ -28,14 +28,6 @@
       "description": "哔哩哔哩公开视频搜索与在线播放"
     },
     {
-      "name": "豆瓣影视",
-      "platform": "dbzy_plugin",
-      "version": "1.0.0",
-      "url": "dist/dbzy/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/dbzy/index.js",
-      "description": "豆瓣资源精选片单"
-    },
-    {
       "name": "非凡影视",
       "platform": "ffzy_plugin",
       "version": "1.0.0",
@@ -92,14 +84,6 @@
       "description": "极速资源专线"
     },
     {
-      "name": "快车影视",
-      "platform": "kuaiche_plugin",
-      "version": "1.0.0",
-      "url": "dist/kuaiche/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/kuaiche/index.js",
-      "description": "快车资源海量剧集"
-    },
-    {
       "name": "量子影视",
       "platform": "lzzy_plugin",
       "version": "1.0.0",
@@ -116,52 +100,12 @@
       "description": "支持自定义任意苹果CMS采集API接口的通用插件"
     },
     {
-      "name": "茅台影视",
-      "platform": "maotai_plugin",
-      "version": "1.0.0",
-      "url": "dist/maotai/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maotai/index.js",
-      "description": "茅台资源海量片库"
-    },
-    {
       "name": "猫眼影视",
       "platform": "maoyan_plugin",
       "version": "1.0.0",
       "url": "dist/maoyan/index.js",
       "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maoyan/index.js",
       "description": "猫眼高清采集资源"
-    },
-    {
-      "name": "魔都影视",
-      "platform": "modu_plugin",
-      "version": "1.0.0",
-      "url": "dist/modu/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/modu/index.js",
-      "description": "魔都动漫与综合资源"
-    },
-    {
-      "name": "牛牛影视",
-      "platform": "niuniu_plugin",
-      "version": "1.0.0",
-      "url": "dist/niuniu/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/niuniu/index.js",
-      "description": "牛牛资源极速线路"
-    },
-    {
-      "name": "飘零影视",
-      "platform": "piaoling_plugin",
-      "version": "1.0.0",
-      "url": "dist/piaoling/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/piaoling/index.js",
-      "description": "飘零网络超清源"
-    },
-    {
-      "name": "瀑布影视",
-      "platform": "pubu_plugin",
-      "version": "1.0.0",
-      "url": "dist/pubu/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/pubu/index.js",
-      "description": "瀑布资源综合片源"
     },
     {
       "name": "奇异影视",
@@ -180,22 +124,6 @@
       "description": "360资源秒播线路"
     },
     {
-      "name": "四圈影视",
-      "platform": "siquan_plugin",
-      "version": "1.0.0",
-      "url": "dist/siquan/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/siquan/index.js",
-      "description": "四圈影视专线"
-    },
-    {
-      "name": "索尼影视",
-      "platform": "snzy_plugin",
-      "version": "1.0.0",
-      "url": "dist/snzy/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/snzy/index.js",
-      "description": "索尼资源超清片源"
-    },
-    {
       "name": "速播影视",
       "platform": "subo_plugin",
       "version": "1.0.0",
@@ -210,14 +138,6 @@
       "url": "dist/tiantang/index.js",
       "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/tiantang/index.js",
       "description": "电影天堂经典片源"
-    },
-    {
-      "name": "卧龙影视",
-      "platform": "wolong_plugin",
-      "version": "1.0.0",
-      "url": "dist/wolong/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/wolong/index.js",
-      "description": "卧龙资源超清剧库"
     },
     {
       "name": "无尽影视",
@@ -242,14 +162,6 @@
       "url": "dist/yaoling/index.js",
       "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/yaoling/index.js",
       "description": "1080P 超清片源"
-    },
-    {
-      "name": "鸭鸭影视",
-      "platform": "yaya_plugin",
-      "version": "1.0.0",
-      "url": "dist/yaya/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/yaya/index.js",
-      "description": "鸭鸭资源影视片库"
     },
     {
       "name": "最大影视",
