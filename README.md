@@ -2,7 +2,7 @@
 
 # 🎬 VideoFreePlugins
 
-**为 [VideoFree (flutter_v)](https://github.com/yyds-store/flutter_v) 打造的开源、高质量、全连通视频插件生态集合**
+**为 VideoFree 打造的开源、高质量、全连通视频插件生态集合**
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 [![Plugins](https://img.shields.io/badge/plugins-21%20verified-success.svg)](plugins.json)
@@ -18,7 +18,7 @@
 
 ## 📖 项目简介
 
-**VideoFreePlugins** 是专为开源影视播放器 **VideoFree (flutter_v)** 打造的官方与社区精选扩展插件仓库。
+**VideoFreePlugins** 是专为开源影视播放器 **VideoFree** 打造的官方与社区精选扩展插件仓库。
 
 - 🎯 **设计哲学**：设计理念与技术规范深度对标 [MusicFreePlugins](https://github.com/maotoumao/MusicFreePlugins)。播放器客户端保持极致轻量、纯粹与无广告，所有影视搜索、详情展示、选集解析和播放线路全部委托给基于 CommonJS 规范的独立 JavaScript 插件执行。
 - ⚡ **100% 连通与自动化探活**：所有插件均接入自动化测试体系，定期自动检索测试词与嗅探播放切片，**已严格剔除所有失效与关停接口，当前收录的 21 个源均保持 100% 连通、可正常播放**。
