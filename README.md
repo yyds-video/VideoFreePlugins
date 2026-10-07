@@ -44,15 +44,29 @@
 
 ---
 
-### 2. 单插件独立安装
+### 2. 声明式 CMS 规则包在线订阅（Dart 原生极速引擎，30 个精选源）
+
+适用于 VideoFree 双引擎架构的声明式规则合集，采用纯 Dart 原生高并发网络请求与本地解析，**零 WebView 沙箱开销，极速秒搜全网与毫秒级探活**，同时无缝兼容 TVBox 规范。
+
+在客户端选择 **「网络链接 / 订阅」** 或 **「剪贴板导入」**，粘贴以下订阅链接即可一键导入 30 个标准采集源：
+
+| 节点类型 | 订阅 URL | 适用场景 |
+| :--- | :--- | :--- |
+| **🚀 jsDelivr CDN（国内加速，推荐）** | `https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/default_cms_rules.json` | 国内免代理高速拉取 |
+| **🌐 GitHub Raw（官方直链）** | `https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/default_cms_rules.json` | 全球海外直连实时同步 |
+| **⚡ Fastly CDN（备用镜像）** | `https://fastly.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/default_cms_rules.json` | 备用 CDN 镜像 |
+
+---
+
+### 3. 单插件独立安装
 
 如果仅需安装个别特定的视频源，在客户端选择 **「从网络安装单个插件」**，粘贴下表中对应插件的「CDN 直链」即可完成单个安装。
 
 ---
 
-### 3. 本地文件安装
+### 4. 本地文件安装
 
-下载单插件的 `index.js` 或整库 `plugins.json` 至手机本地存储，在客户端中选择 **「从本地文件安装」** 即可无网离线导入。
+下载单插件的 `index.js`、整库 `plugins.json` 或 `default_cms_rules.json` 至本地，在客户端中选择 **「从本地文件安装 / 粘贴源码」** 即可无网离线导入。
 
 ---
 
