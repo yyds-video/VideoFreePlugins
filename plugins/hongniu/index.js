@@ -17,14 +17,14 @@ module.exports = {
       key: 'apiUrl',
       title: '采集接口地址',
       description: '默认使用红牛影视官方接口',
-      defaultValue: 'https://www.hongniuzy2.com/api.php/provide/vod/at/josn/'
+      defaultValue: 'https://www.hongniuzy2.com/api.php/provide/vod/'
     }
   ],
 
   _getApiUrl() {
     let url = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('apiUrl')) || '';
     if (!url || !url.trim()) {
-      url = 'https://www.hongniuzy2.com/api.php/provide/vod/at/josn/';
+      url = 'https://www.hongniuzy2.com/api.php/provide/vod/';
     }
     url = url.trim();
     if (!url.endsWith('/') && !url.includes('?')) {

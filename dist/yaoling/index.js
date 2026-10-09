@@ -1,12 +1,12 @@
 /**
- * 妖灵影视 (YAOLING) 插件
+ * 妖灵超清 (YAOLING) 插件
  * 基于苹果CMS标准采集接口
  */
 const axios = require('axios');
 
 module.exports = {
   platform: 'yaoling_plugin',
-  name: '妖灵影视',
+  name: '妖灵超清',
   version: '1.0.0',
   author: 'VideoFree Community',
   description: '1080P 超清片源',
@@ -16,15 +16,15 @@ module.exports = {
     {
       key: 'apiUrl',
       title: '采集接口地址',
-      description: '默认使用妖灵影视官方接口',
-      defaultValue: 'https://api.1080zyku.com/inc/apijson.php/vod'
+      description: '默认使用妖灵超清官方接口',
+      defaultValue: 'https://api.1080zyku.com/inc/apijson.php/'
     }
   ],
 
   _getApiUrl() {
     let url = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('apiUrl')) || '';
     if (!url || !url.trim()) {
-      url = 'https://api.1080zyku.com/inc/apijson.php/vod';
+      url = 'https://api.1080zyku.com/inc/apijson.php/';
     }
     url = url.trim();
     if (!url.endsWith('/') && !url.includes('?')) {

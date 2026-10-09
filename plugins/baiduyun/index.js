@@ -1,30 +1,30 @@
 /**
- * 红牛影视 (HONGNIU) 插件
+ * 百度云盘 (BAIDUYUN) 插件
  * 基于苹果CMS标准采集接口
  */
 const axios = require('axios');
 
 module.exports = {
-  platform: 'hongniu_plugin',
-  name: '红牛影视',
+  platform: 'baiduyun_plugin',
+  name: '百度云盘',
   version: '1.0.0',
   author: 'VideoFree Community',
-  description: '红牛资源秒播线路',
-  srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/hongniu/index.js',
+  description: '百度云盘超清秒播源',
+  srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/baiduyun/index.js',
   supportedSearchType: ['all', 'movie', 'tv'],
   userVariables: [
     {
       key: 'apiUrl',
       title: '采集接口地址',
-      description: '默认使用红牛影视官方接口',
-      defaultValue: 'https://www.hongniuzy2.com/api.php/provide/vod/'
+      description: '默认使用百度云盘官方接口',
+      defaultValue: 'https://api.apibdzy.com/api.php/provide/vod/'
     }
   ],
 
   _getApiUrl() {
     let url = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('apiUrl')) || '';
     if (!url || !url.trim()) {
-      url = 'https://www.hongniuzy2.com/api.php/provide/vod/';
+      url = 'https://api.apibdzy.com/api.php/provide/vod/';
     }
     url = url.trim();
     if (!url.endsWith('/') && !url.includes('?')) {

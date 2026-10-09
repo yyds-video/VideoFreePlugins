@@ -8,7 +8,8 @@
     "build": "node ./scripts/build.js && node ./scripts/generate.js",
     "generate": "node ./scripts/generate.js",
     "test-all": "node ./test/test-all.js",
-    "check-cms": "node ./scripts/check_cms_rules.js"
+    "check-cms": "node ./scripts/check_cms_rules.js",
+    "check-plugins": "node ./scripts/test_and_filter.js"
   },
   "keywords": [
     "videofree",

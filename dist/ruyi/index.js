@@ -1,30 +1,30 @@
 /**
- * 奇异影视 (QIYI) 插件
+ * 如意影视 (RUYI) 插件
  * 基于苹果CMS标准采集接口
  */
 const axios = require('axios');
 
 module.exports = {
-  platform: 'qiyi_plugin',
-  name: '奇异影视',
+  platform: 'ruyi_plugin',
+  name: '如意影视',
   version: '1.0.0',
   author: 'VideoFree Community',
-  description: '奇异高清秒播',
-  srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/qiyi/index.js',
+  description: '如意资源综合高清片库',
+  srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/ruyi/index.js',
   supportedSearchType: ['all', 'movie', 'tv'],
   userVariables: [
     {
       key: 'apiUrl',
       title: '采集接口地址',
-      description: '默认使用奇异影视官方接口',
-      defaultValue: 'https://iqiyizyapi.com/api.php/provide/vod/'
+      description: '默认使用如意影视官方接口',
+      defaultValue: 'https://cj.rycjapi.com/api.php/provide/vod/at/json'
     }
   ],
 
   _getApiUrl() {
     let url = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('apiUrl')) || '';
     if (!url || !url.trim()) {
-      url = 'https://iqiyizyapi.com/api.php/provide/vod/';
+      url = 'https://cj.rycjapi.com/api.php/provide/vod/at/json';
     }
     url = url.trim();
     if (!url.endsWith('/') && !url.includes('?')) {

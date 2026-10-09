@@ -1,30 +1,30 @@
 /**
- * 红牛影视 (HONGNIU) 插件
+ * 魔都专线 (MODU_ZY) 插件
  * 基于苹果CMS标准采集接口
  */
 const axios = require('axios');
 
 module.exports = {
-  platform: 'hongniu_plugin',
-  name: '红牛影视',
+  platform: 'modu_zy_plugin',
+  name: '魔都专线',
   version: '1.0.0',
   author: 'VideoFree Community',
-  description: '红牛资源秒播线路',
-  srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/hongniu/index.js',
+  description: '魔都影视官方专线',
+  srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/modu_zy/index.js',
   supportedSearchType: ['all', 'movie', 'tv'],
   userVariables: [
     {
       key: 'apiUrl',
       title: '采集接口地址',
-      description: '默认使用红牛影视官方接口',
-      defaultValue: 'https://www.hongniuzy2.com/api.php/provide/vod/'
+      description: '默认使用魔都专线官方接口',
+      defaultValue: 'https://www.mdzyapi.com/api.php/provide/vod/'
     }
   ],
 
   _getApiUrl() {
     let url = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('apiUrl')) || '';
     if (!url || !url.trim()) {
-      url = 'https://www.hongniuzy2.com/api.php/provide/vod/';
+      url = 'https://www.mdzyapi.com/api.php/provide/vod/';
     }
     url = url.trim();
     if (!url.endsWith('/') && !url.includes('?')) {

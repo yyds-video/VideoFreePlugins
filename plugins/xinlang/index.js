@@ -17,14 +17,14 @@ module.exports = {
       key: 'apiUrl',
       title: '采集接口地址',
       description: '默认使用新浪影视官方接口',
-      defaultValue: 'https://api.xinlangapi.com/xinlangapi.php/provide/vod/josn/'
+      defaultValue: 'https://api.xinlangapi.com/xinlangapi.php/provide/vod/at/json'
     }
   ],
 
   _getApiUrl() {
     let url = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('apiUrl')) || '';
     if (!url || !url.trim()) {
-      url = 'https://api.xinlangapi.com/xinlangapi.php/provide/vod/josn/';
+      url = 'https://api.xinlangapi.com/xinlangapi.php/provide/vod/at/json';
     }
     url = url.trim();
     if (!url.endsWith('/') && !url.includes('?')) {

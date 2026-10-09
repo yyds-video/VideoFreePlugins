@@ -9,7 +9,15 @@
       "version": "1.0.0",
       "url": "dist/aikun/index.js",
       "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/aikun/index.js",
-      "description": "爱坤影视专线"
+      "description": "爱坤影视秒播专线"
+    },
+    {
+      "name": "百度云盘",
+      "platform": "baiduyun_plugin",
+      "version": "1.0.0",
+      "url": "dist/baiduyun/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/baiduyun/index.js",
+      "description": "百度云盘超清秒播源"
     },
     {
       "name": "暴风影视",
@@ -108,12 +116,28 @@
       "description": "猫眼高清采集资源"
     },
     {
-      "name": "奇异影视",
-      "platform": "qiyi_plugin",
+      "name": "魔都动漫",
+      "platform": "modu_plugin",
       "version": "1.0.0",
-      "url": "dist/qiyi/index.js",
-      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/qiyi/index.js",
-      "description": "奇异高清秒播"
+      "url": "dist/modu/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/modu/index.js",
+      "description": "魔都动漫与综合资源"
+    },
+    {
+      "name": "魔都专线",
+      "platform": "modu_zy_plugin",
+      "version": "1.0.0",
+      "url": "dist/modu_zy/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/modu_zy/index.js",
+      "description": "魔都影视官方专线"
+    },
+    {
+      "name": "如意影视",
+      "platform": "ruyi_plugin",
+      "version": "1.0.0",
+      "url": "dist/ruyi/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/ruyi/index.js",
+      "description": "如意资源综合高清片库"
     },
     {
       "name": "360影视",
@@ -140,12 +164,28 @@
       "description": "电影天堂经典片源"
     },
     {
+      "name": "U酷影视",
+      "platform": "uku_plugin",
+      "version": "1.0.0",
+      "url": "dist/uku/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/uku/index.js",
+      "description": "U酷资源极速专线"
+    },
+    {
       "name": "无尽影视",
       "platform": "wujin_plugin",
       "version": "1.0.0",
       "url": "dist/wujin/index.js",
       "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/wujin/index.js",
       "description": "无尽资源稳定高清源"
+    },
+    {
+      "name": "无尽专线",
+      "platform": "wujin_net_plugin",
+      "version": "1.0.0",
+      "url": "dist/wujin_net/index.js",
+      "srcUrl": "https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/wujin_net/index.js",
+      "description": "无尽资源BGP专线节点"
     },
     {
       "name": "新浪影视",
@@ -156,7 +196,7 @@
       "description": "新浪秒播专线"
     },
     {
-      "name": "妖灵影视",
+      "name": "妖灵超清",
       "platform": "yaoling_plugin",
       "version": "1.0.0",
       "url": "dist/yaoling/index.js",

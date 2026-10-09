@@ -5,12 +5,12 @@
 **为 VideoFree 打造的开源、高质量、全连通视频插件生态集合**
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
-[![Plugins](https://img.shields.io/badge/plugins-21%20verified-success.svg)](plugins.json)
-[![Status](https://img.shields.io/badge/health-100%25%20passing-brightgreen.svg)](#-经过连通性验证的可用插件列表-共-21-个)
+[![Plugins](https://img.shields.io/badge/plugins-26%20verified-success.svg)](plugins.json)
+[![Status](https://img.shields.io/badge/health-100%25%20passing-brightgreen.svg)](#-经过连通性验证的可用插件列表-共-26-个)
 [![Node](https://img.shields.io/badge/node-%3E%3D16.0.0-orange.svg)](package.json)
 [![MusicFree Compatible](https://img.shields.io/badge/spec-MusicFree%20Protocol-blueviolet.svg)](https://github.com/maotoumao/MusicFreePlugins)
 
-[📌 订阅与安装](#-订阅与安装) • [🧩 可用插件列表](#-经过连通性验证的可用插件列表-共-21-个) • [🛠️ 开发规范](#-插件开发规范-plugin-specification) • [💻 本地构建与调试](#-本地工程调试与构建) • [❓ 常见问题](#-常见问题-faq) • [⚖️ 免责声明](#-免责声明-disclaimer)
+[📌 订阅与安装](#-订阅与安装) • [🧩 可用插件列表](#-经过连通性验证的可用插件列表-共-26-个) • [🛠️ 开发规范](#-插件开发规范-plugin-specification) • [💻 本地构建与调试](#-本地工程调试与构建) • [❓ 常见问题](#-常见问题-faq) • [⚖️ 免责声明](#-免责声明-disclaimer)
 
 </div>
 
@@ -70,33 +70,38 @@
 
 ---
 
-## 🧩 经过连通性验证的可用插件列表 (共 21 个)
+## 🧩 经过连通性验证的可用插件列表 (共 26 个)
 
-> 💡 **健康度保证**：以下所有插件已通过自动化脚本实测，搜索与播放响应时间处于 1.5s ~ 4.8s 优良区间。
+> 💡 **健康度保证**：以下所有插件已通过自动化脚本实测，搜索与播放响应时间处于 1.3s ~ 2.8s 优良区间，且 100% 连通可用。
 
 | 序号 | 插件名称 | 唯一标识 (`platform`) | 平均响应 | 特性与功能说明 | 单插件 CDN 直链 | 单插件 GitHub 直链 |
 | :---: | :--- | :--- | :---: | :--- | :---: | :---: |
-| 1 | **电影天堂** | `tiantang_plugin` | ~1.5s | 电影天堂经典热播片源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/tiantang/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/tiantang/index.js) |
-| 2 | **红牛影视** | `hongniu_plugin` | ~1.6s | 红牛资源秒播高清专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/hongniu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/hongniu/index.js) |
-| 3 | **豪华影视** | `haohua_plugin` | ~2.0s | 豪华资源全网热播剧集 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/haohua/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/haohua/index.js) |
-| 4 | **金鹰影视** | `jinying_plugin` | ~2.2s | 金鹰影视老牌稳定接口 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/jinying/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/jinying/index.js) |
-| 5 | **虎牙影视** | `huya_plugin` | ~2.3s | 虎牙官方优质采集资源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/huya/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/huya/index.js) |
-| 6 | **无尽影视** | `wujin_plugin` | ~2.6s | 无尽资源超清稳定源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/wujin/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/wujin/index.js) |
-| 7 | **非凡影视** | `ffzy_plugin` | ~2.6s | 非凡影视官方高清视频资源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/ffzy/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/ffzy/index.js) |
-| 8 | **苹果CMS通用源** | `maccms_universal` | ~2.7s | **支持自定义任意 MacCMS API 接口** | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maccms/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/maccms/index.js) |
-| 9 | **哔哩哔哩** | `bilibili_video` | ~2.8s | B 站公开视频搜索与在线嗅探播放 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bilibili/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/bilibili/index.js) |
-| 10 | **新浪影视** | `xinlang_plugin` | ~3.0s | 新浪秒播极速专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/xinlang/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/xinlang/index.js) |
-| 11 | **奇异影视** | `qiyi_plugin` | ~3.3s | 奇异高清秒播片源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/qiyi/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/qiyi/index.js) |
-| 12 | **猫眼影视** | `maoyan_plugin` | ~3.5s | 猫眼高清采集线路 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maoyan/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/maoyan/index.js) |
-| 13 | **妖灵影视** | `yaoling_plugin` | ~3.6s | 1080P 高清片源库 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/yaoling/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/yaoling/index.js) |
-| 14 | **速播影视** | `subo_plugin` | ~3.6s | 速播资源高速流畅线路 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/subo/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/subo/index.js) |
-| 15 | **360影视** | `sanliu_plugin` | ~3.7s | 360资源秒播线路 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/sanliu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/sanliu/index.js) |
-| 16 | **量子影视** | `lzzy_plugin` | ~3.8s | 量子资源极速影视源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/lzzy/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/lzzy/index.js) |
-| 17 | **光速影视** | `guangsu_plugin` | ~3.9s | 光速资源极速播放专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/guangsu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/guangsu/index.js) |
-| 18 | **极速影视** | `jisu_plugin` | ~4.0s | 极速资源专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/jisu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/jisu/index.js) |
-| 19 | **最大影视** | `zuid_plugin` | ~4.6s | 最大资源老牌稳定片库 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/zuid/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/zuid/index.js) |
-| 20 | **暴风影视** | `bfzy_plugin` | ~4.8s | 暴风资源超清秒播源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bfzy/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins@main/dist/bfzy/index.js) |
-| 21 | **爱坤影视** | `aikun_plugin` | ~6.7s | 爱坤影视专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/aikun/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/aikun/index.js) |
+| 1 | **暴风影视** | `bfzy_plugin` | ~1.3s | 暴风资源超清秒播源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bfzy/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/bfzy/index.js) |
+| 2 | **无尽影视** | `wujin_plugin` | ~1.4s | 无尽资源超清稳定源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/wujin/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/wujin/index.js) |
+| 3 | **豪华影视** | `haohua_plugin` | ~1.5s | 豪华资源全网热播剧集 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/haohua/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/haohua/index.js) |
+| 4 | **电影天堂** | `tiantang_plugin` | ~1.5s | 电影天堂经典热播片源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/tiantang/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/tiantang/index.js) |
+| 5 | **爱坤影视** | `aikun_plugin` | ~1.6s | 爱坤影视秒播专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/aikun/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/aikun/index.js) |
+| 6 | **魔都动漫** | `modu_plugin` | ~1.6s | 魔都动漫与综合资源库 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/modu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/modu/index.js) |
+| 7 | **速播影视** | `subo_plugin` | ~1.6s | 速播资源高速流畅线路 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/subo/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/subo/index.js) |
+| 8 | **红牛影视** | `hongniu_plugin` | ~1.6s | 红牛资源秒播高清专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/hongniu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/hongniu/index.js) |
+| 9 | **金鹰影视** | `jinying_plugin` | ~1.7s | 金鹰影视老牌稳定接口 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/jinying/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/jinying/index.js) |
+| 10 | **虎牙影视** | `huya_plugin` | ~1.7s | 虎牙官方优质采集资源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/huya/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/huya/index.js) |
+| 11 | **猫眼影视** | `maoyan_plugin` | ~1.7s | 猫眼高清采集线路 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maoyan/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/maoyan/index.js) |
+| 12 | **量子影视** | `lzzy_plugin` | ~1.7s | 量子资源极速影视源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/lzzy/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/lzzy/index.js) |
+| 13 | **光速影视** | `guangsu_plugin` | ~1.7s | 光速资源极速播放专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/guangsu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/guangsu/index.js) |
+| 14 | **极速影视** | `jisu_plugin` | ~1.8s | 极速资源专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/jisu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/jisu/index.js) |
+| 15 | **妖灵超清** | `yaoling_plugin` | ~1.8s | 1080P 高清片源库 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/yaoling/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/yaoling/index.js) |
+| 16 | **无尽专线** | `wujin_net_plugin` | ~1.8s | 无尽资源 BGP 独立专线节点 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/wujin_net/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/wujin_net/index.js) |
+| 17 | **U酷影视** | `uku_plugin` | ~1.8s | U酷资源极速专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/uku/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/uku/index.js) |
+| 18 | **魔都专线** | `modu_zy_plugin` | ~1.8s | 魔都影视官方专线 CDN | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/modu_zy/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/modu_zy/index.js) |
+| 19 | **哔哩哔哩** | `bilibili_video` | ~1.8s | B 站公开视频搜索与在线嗅探播放 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/bilibili/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/bilibili/index.js) |
+| 20 | **苹果CMS通用源** | `maccms_universal` | ~2.0s | **支持自定义任意 MacCMS API 接口** | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/maccms/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/maccms/index.js) |
+| 21 | **新浪影视** | `xinlang_plugin` | ~2.0s | 新浪秒播极速专线 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/xinlang/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/xinlang/index.js) |
+| 22 | **非凡影视** | `ffzy_plugin` | ~2.1s | 非凡影视官方高清视频资源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/ffzy/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/ffzy/index.js) |
+| 23 | **百度云盘** | `baiduyun_plugin` | ~2.2s | 百度云盘超清秒播源 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/baiduyun/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/baiduyun/index.js) |
+| 24 | **最大影视** | `zuid_plugin` | ~2.3s | 最大资源老牌稳定片库 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/zuid/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/zuid/index.js) |
+| 25 | **360影视** | `sanliu_plugin` | ~2.4s | 360资源秒播线路 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/sanliu/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/sanliu/index.js) |
+| 26 | **如意影视** | `ruyi_plugin` | ~2.7s | 如意资源综合高清片库 | [CDN 直链](https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/ruyi/index.js) | [GitHub](https://raw.githubusercontent.com/yyds-video/VideoFreePlugins/main/dist/ruyi/index.js) |
 
 ---
 

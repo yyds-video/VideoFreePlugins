@@ -17,14 +17,14 @@ module.exports = {
       key: 'apiUrl',
       title: '采集接口地址',
       description: '默认使用光速影视官方接口',
-      defaultValue: 'https://api.guangsuapi.com/api.php/provide/vod/josn/'
+      defaultValue: 'https://api.guangsuapi.com/api.php/provide/vod/'
     }
   ],
 
   _getApiUrl() {
     let url = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('apiUrl')) || '';
     if (!url || !url.trim()) {
-      url = 'https://api.guangsuapi.com/api.php/provide/vod/josn/';
+      url = 'https://api.guangsuapi.com/api.php/provide/vod/';
     }
     url = url.trim();
     if (!url.endsWith('/') && !url.includes('?')) {

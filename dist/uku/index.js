@@ -1,30 +1,30 @@
 /**
- * 红牛影视 (HONGNIU) 插件
+ * U酷影视 (UKU) 插件
  * 基于苹果CMS标准采集接口
  */
 const axios = require('axios');
 
 module.exports = {
-  platform: 'hongniu_plugin',
-  name: '红牛影视',
+  platform: 'uku_plugin',
+  name: 'U酷影视',
   version: '1.0.0',
   author: 'VideoFree Community',
-  description: '红牛资源秒播线路',
-  srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/hongniu/index.js',
+  description: 'U酷资源极速专线',
+  srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/uku/index.js',
   supportedSearchType: ['all', 'movie', 'tv'],
   userVariables: [
     {
       key: 'apiUrl',
       title: '采集接口地址',
-      description: '默认使用红牛影视官方接口',
-      defaultValue: 'https://www.hongniuzy2.com/api.php/provide/vod/'
+      description: '默认使用U酷影视官方接口',
+      defaultValue: 'https://api.ukuapi88.com/api.php/provide/vod/'
     }
   ],
 
   _getApiUrl() {
     let url = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('apiUrl')) || '';
     if (!url || !url.trim()) {
-      url = 'https://www.hongniuzy2.com/api.php/provide/vod/';
+      url = 'https://api.ukuapi88.com/api.php/provide/vod/';
     }
     url = url.trim();
     if (!url.endsWith('/') && !url.includes('?')) {

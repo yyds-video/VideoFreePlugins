@@ -21,6 +21,22 @@ module.exports = {
     }
   ],
 
+  _cachedBuvid: '',
+
+  async _getBuvid() {
+    if (this._cachedBuvid) return this._cachedBuvid;
+    try {
+      const res = await axios.get('https://api.bilibili.com/x/frontend/finger/spi', {
+        headers: { 'User-Agent': 'Mozilla/5.0' },
+        timeout: 3000
+      });
+      if (res.data && res.data.data && res.data.data.b_3) {
+        this._cachedBuvid = res.data.data.b_3;
+      }
+    } catch (_) {}
+    return this._cachedBuvid;
+  },
+
   async search(query, page = 1) {
     const url = `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=${encodeURIComponent(query)}&page=${page}`;
     
@@ -32,6 +48,11 @@ module.exports = {
     const cookie = (typeof env !== 'undefined' && env.getUserVariable && env.getUserVariable('cookie')) || '';
     if (cookie) {
       headers['Cookie'] = cookie;
+    } else {
+      const buvid = await this._getBuvid();
+      if (buvid) {
+        headers['Cookie'] = `buvid3=${buvid}`;
+      }
     }
 
     const res = await axios.get(url, { headers, responseType: 'json' });

@@ -11,78 +11,84 @@ global.env = {
 
 const distDir = path.resolve(__dirname, '../dist');
 
-async function testAll() {
-  console.log('🔍 开始全量检测 32 个视频源插件的实时连通性...\n');
+async function testSinglePlugin(pluginDir) {
+  const targetJs = path.join(distDir, pluginDir, 'index.js');
+  try {
+    await fs.access(targetJs);
+    const plugin = require(targetJs);
+    const startTime = Date.now();
 
-  const entries = await fs.readdir(distDir, { withFileTypes: true });
-  const validPlugins = [];
-  const deadPlugins = [];
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('请求超时 (7s)')), 7000)
+    );
 
-  for (const entry of entries) {
-    if (!entry.isDirectory() || entry.name.startsWith('_')) continue;
-    const pluginDir = entry.name;
-    const targetJs = path.join(distDir, pluginDir, 'index.js');
+    const searchPromise = plugin.search('斗罗大陆', 1);
+    const result = await Promise.race([searchPromise, timeoutPromise]);
+    const duration = Date.now() - startTime;
 
-    try {
-      await fs.access(targetJs);
-      const plugin = require(targetJs);
-      const startTime = Date.now();
-
-      // 设置 7 秒超时
-      const timeoutPromise = new Promise((_, reject) =>
-        setTimeout(() => reject(new Error('请求超时 (7s)')), 7000)
-      );
-
-      // 搜索测试（使用超高覆盖率关键词）
-      const searchPromise = plugin.search('斗罗大陆', 1);
-      const result = await Promise.race([searchPromise, timeoutPromise]);
-      const duration = Date.now() - startTime;
-
-      if (result && result.data && result.data.length > 0) {
-        console.log(`✅ [可用] ${plugin.name} (${plugin.platform}) - 耗时: ${duration}ms, 结果数: ${result.data.length}`);
-        validPlugins.push({
+    if (result && result.data && result.data.length > 0) {
+      return {
+        status: 'ok',
+        dir: pluginDir,
+        platform: plugin.platform,
+        name: plugin.name,
+        duration,
+        count: result.data.length
+      };
+    } else {
+      const retryResult = await Promise.race([plugin.search('阿凡达', 1), timeoutPromise]);
+      if (retryResult && retryResult.data && retryResult.data.length > 0) {
+        return {
+          status: 'ok',
           dir: pluginDir,
           platform: plugin.platform,
           name: plugin.name,
-          version: plugin.version,
-          duration: duration,
-          count: result.data.length
-        });
+          duration: Date.now() - startTime,
+          count: retryResult.data.length
+        };
       } else {
-        // 尝试用另一个词 "阿凡达"
-        const retryResult = await Promise.race([plugin.search('阿凡达', 1), timeoutPromise]);
-        if (retryResult && retryResult.data && retryResult.data.length > 0) {
-          console.log(`✅ [可用] ${plugin.name} (${plugin.platform}) - 耗时: ${duration}ms (重试命中)`);
-          validPlugins.push({
-            dir: pluginDir,
-            platform: plugin.platform,
-            name: plugin.name,
-            version: plugin.version,
-            duration: duration,
-            count: retryResult.data.length
-          });
-        } else {
-          console.warn(`❌ [失效: 无数据] ${plugin.name} (${plugin.platform})`);
-          deadPlugins.push({ dir: pluginDir, name: plugin.name, reason: '搜索无数据返回' });
-        }
+        return { status: 'empty', dir: pluginDir, name: plugin.name, reason: '搜索无数据返回' };
       }
-    } catch (err) {
-      console.error(`❌ [失效: 异常] ${pluginDir} - 原因: ${err.message}`);
-      deadPlugins.push({ dir: pluginDir, name: pluginDir, reason: err.message });
     }
+  } catch (err) {
+    return { status: 'error', dir: pluginDir, name: pluginDir, reason: err.message };
+  }
+}
+
+async function testAll() {
+  console.log('🔍 开始全并发检测所有视频源插件实时连通性...\n');
+
+  const entries = await fs.readdir(distDir, { withFileTypes: true });
+  const pluginDirs = entries
+    .filter(e => e.isDirectory() && !e.name.startsWith('_'))
+    .map(e => e.name);
+
+  const results = await Promise.all(pluginDirs.map(testSinglePlugin));
+
+  const validPlugins = results.filter(r => r.status === 'ok');
+  const deadPlugins = results.filter(r => r.status !== 'ok');
+
+  validPlugins.sort((a, b) => a.duration - b.duration);
+
+  for (const p of validPlugins) {
+    console.log(`✅ [可用] ${p.name.padEnd(8, ' ')} (${p.platform.padEnd(16, ' ')}) - 耗时: ${p.duration.toString().padStart(4, ' ')}ms, 结果数: ${p.count}`);
+  }
+
+  for (const d of deadPlugins) {
+    console.log(`❌ [失效] ${d.name} (${d.dir}) - 原因: ${d.reason}`);
   }
 
   console.log('\n=========================================');
-  console.log(`📊 检测完毕: 共检测 ${validPlugins.length + deadPlugins.length} 个源`);
-  console.log(`🟢 可用源: ${validPlugins.length} 个`);
+  console.log(`📊 检测完毕: 共检测 ${results.length} 个插件源`);
+  console.log(`🟢 可用源: ${validPlugins.length} 个 (${Math.round(validPlugins.length / results.length * 100)}%)`);
   console.log(`🔴 失效/异常源: ${deadPlugins.length} 个`);
   console.log('=========================================\n');
 
-  console.log('可用源清单:');
-  validPlugins.forEach(p => console.log(`  - ${p.name} (${p.platform}) [${p.duration}ms]`));
-
-  console.log('\n失效源清单:');
-  deadPlugins.forEach(p => console.log(`  - ${p.name} (${p.reason})`));
+  if (deadPlugins.length > 0) {
+    process.exit(1);
+  } else {
+    console.log('🎉 所有 JS 插件源 100% 验证通过！');
+  }
 }
 
 testAll();

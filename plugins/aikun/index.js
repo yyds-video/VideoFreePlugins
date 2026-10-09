@@ -9,7 +9,7 @@ module.exports = {
   name: '爱坤影视',
   version: '1.0.0',
   author: 'VideoFree Community',
-  description: '爱坤影视专线',
+  description: '爱坤影视秒播专线',
   srcUrl: 'https://cdn.jsdelivr.net/gh/yyds-video/VideoFreePlugins@main/dist/aikun/index.js',
   supportedSearchType: ['all', 'movie', 'tv'],
   userVariables: [

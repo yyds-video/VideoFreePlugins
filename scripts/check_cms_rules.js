@@ -54,6 +54,33 @@ async function checkSingleRule(rule) {
       error: '返回数据为空或无有效 list'
     };
   } catch (err) {
+    // 遇到瞬时网络抖动重试一次
+    try {
+      await new Promise(r => setTimeout(r, 600));
+      const resRetry = await axios.get(searchUrl, {
+        timeout: 7000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        },
+        validateStatus: (s) => s === 200
+      });
+      const costRetry = Date.now() - startTime;
+      const data = resRetry.data;
+      if (data && typeof data === 'object' && Array.isArray(data.list) && data.list.length > 0) {
+        const first = data.list[0];
+        const playUrl = first.vod_play_url || '';
+        if (playUrl.length > 15 && (playUrl.includes('.m3u8') || playUrl.includes('.mp4') || playUrl.includes('$'))) {
+          return {
+            status: 'ok',
+            rule,
+            cost: costRetry,
+            total: data.total || data.list.length,
+            sampleVod: first.vod_name
+          };
+        }
+      }
+    } catch (_) {}
+
     const cost = Date.now() - startTime;
     return {
       status: 'error',
